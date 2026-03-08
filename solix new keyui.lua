@@ -69,20 +69,6 @@ local Theme = {
 	Error = Color3.fromRGB(255, 60, 60)
 }
 
-local error_messages = {
-	KEY_EXPIRED = "Your key has expired. Please renew it to continue.",
-	KEY_BANNED = "This key has been blacklisted. Contact support for assistance.",
-	KEY_HWID_LOCKED = "This key is linked to a different HWID. Please reset it via our bot.",
-	KEY_INCORRECT = "The provided key is incorrect or no longer valid.",
-	KEY_INVALID = "Invalid key format. Please check your key and try again.",
-	SCRIPT_ID_INCORRECT = "The provided script ID does not exist or has been removed.",
-	SCRIPT_ID_INVALID = "This script has been deleted by its owner.",
-	INVALID_EXECUTOR = "Invalid HWID header detected. Your executor may not be supported.",
-	SECURITY_ERROR = "Security validation failed (Cloudflare check). Please retry.",
-	TIME_ERROR = "Invalid client time detected. Please sync your system clock.",
-	UNKNOWN_ERROR = "An unknown error occurred. Please contact support."
-}
-
 local function DeleteFile(filePath)
 	if isfile(filePath) then
 		delfile(filePath)
@@ -329,19 +315,6 @@ TextBoxStroke.Thickness = 1
 TextBoxStroke.Transparency = 1
 TextBoxStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
-local KeyTextBox = Instance.new("TextBox", TextBoxContainer)
-KeyTextBox.Size = UDim2.new(1, -24, 1, 0)
-KeyTextBox.Position = UDim2.new(0, 12, 0, 0)
-KeyTextBox.BackgroundTransparency = 1
-KeyTextBox.FontFace = CustomFont
-KeyTextBox.PlaceholderText = "Paste your key here..."
-KeyTextBox.PlaceholderColor3 = Theme.InactiveText
-KeyTextBox.Text = ""
-KeyTextBox.TextColor3 = Theme.Text
-KeyTextBox.TextSize = 15
-KeyTextBox.ClearTextOnFocus = false
-KeyTextBox.TextTransparency = 1
-
 local Buttons = {}
 local isMobile = UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled
 
@@ -382,24 +355,6 @@ local function CreateButton(text, position, color)
 
 	table.insert(Buttons, {button = Button, stroke = ButtonStroke})
 	return Button
-end
-
-local Button1, Button2, Button3, Button4
-
-if isMobile then
-	Button1 = CreateButton("Get Key (Linkvertise)", UDim2.new(0.5, 0, 0, 185), Theme.Element)
-	Button2 = CreateButton("Get Key (Shrink)", UDim2.new(0.5, 0, 0, 240), Theme.Element)
-	Button3 = CreateButton("Join Discord", UDim2.new(0.5, 0, 0, 295), Theme.Element)
-	Button4 = CreateButton("Buy Standard Key", UDim2.new(0.5, 0, 0, 350), Theme.Element)
-
-	for _, v in ipairs(Buttons) do
-		v.button.Size = UDim2.new(0, 320, 0, 42)
-	end
-else
-	Button1 = CreateButton("Get Key (Linkvertise)", UDim2.new(0.25, 0, 0, 190), Theme.Element)
-	Button2 = CreateButton("Get Key (Shrink)", UDim2.new(0.75, 0, 0, 190), Theme.Element)
-	Button3 = CreateButton("Join Discord", UDim2.new(0.25, 0, 0, 255), Theme.Element)
-	Button4 = CreateButton("Buy Standard Key", UDim2.new(0.75, 0, 0, 255), Theme.Element)
 end
 
 local CloseButton = Instance.new("TextButton", MainFrame)
