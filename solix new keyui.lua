@@ -2,10 +2,6 @@ repeat wait() until game:IsLoaded()
 
 local wait = task.wait
 local spawn = task.spawn
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/debunked69/Solixreworkkeysystem/refs/heads/main/Loading%20Screen"))()
-wait(0.3)
-
 local CoreGui = cloneref(game:GetService("CoreGui"))
 local HttpService = cloneref(game:GetService("HttpService"))
 local Lighting = cloneref(game:GetService("Lighting"))
@@ -59,16 +55,6 @@ end
 if CoreGui:FindFirstChild("Solix Notification") then
 	CoreGui["Solix Notification"]:Destroy()
 end
-
-local Config = {
-	File = "solixhub/savedkey.txt",
-	Title = "Solix Hub Free 15+ Games",
-	Description = "Lifetime key access is available for a one-time payment of $15 via solixhub.com",
-	Linkvertise = "https://ads.luarmor.net/get_key?for=Solixhub_Free_KeySystem-OWlLHDMCHADk",
-	Shrink = "https://ads.luarmor.net/get_key?for=Solix_Free_Keysystems-pqJCGTqnTsng",
-	Discord = "https://discord.gg/solixhub",
-	Shop = "https://solixhub.com/",
-}
 
 local Theme = {
 	Background = Color3.fromRGB(15, 12, 16),
