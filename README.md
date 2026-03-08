@@ -1,2 +1,0 @@
-# blox-fruits
-blox fruits
