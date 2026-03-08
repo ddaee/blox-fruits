@@ -18,7 +18,6 @@ local plr = Players.LocalPlayer
 
 local GameList = {
 	["3808223175"] = { id = "4fe2dfc202115670b1813277df916ab2", keyless = false }, -- Jujutsu Infinite
-	["994732206"]  = { id = "e2718ddebf562c5c4080dfce26b09398", keyless = true }, -- Blox Fruits
 	["1511883870"] = { id = "fefdf5088c44beb34ef52ed6b520507c", keyless = false }, -- Shindo Life
 	["6035872082"] = { id = "3bb7969a9ecb9e317b0a24681327c2e2", keyless = false }, -- Rivals
 	["245662005"]  = { id = "21ad7f491e4658e9dc9529a60c887c6e", keyless = true },  -- Jailbreak
